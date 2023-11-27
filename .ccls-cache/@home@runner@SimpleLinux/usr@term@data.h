@@ -1,0 +1,1 @@
+const char userTerm_prompt[10] = "\n>";

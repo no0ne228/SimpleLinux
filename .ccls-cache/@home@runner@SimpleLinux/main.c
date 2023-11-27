@@ -10,11 +10,11 @@
 #include "sys/platform/default.h"
 #endif
 
-#include <stdio.h>
-#include "sys/data/VERSION.h"
+#include "sys/term_loop.h"
 
 int main() {
-  printf("%s v.%s", VERSION_NAME, VERSION_SHORTVER);
+  printf("%s", version_full);
   platform_init();
+  term_loop();
   return 0;
 }
