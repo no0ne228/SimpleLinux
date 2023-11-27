@@ -8,6 +8,7 @@
 #include "../usr/bin/sh.h"
 
 void term_loop() {
-  sh_run(input(userTerm_prompt, 100));
-  term_loop();
+  for (;;) {
+    sh_run(input(userTerm_prompt, 100));
+  }
 }

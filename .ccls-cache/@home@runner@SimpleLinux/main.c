@@ -1,5 +1,7 @@
 /*main.c*/
 
+/*#pragma GCC diagnostic ignored "-Wunused-result"*/
+
 #ifdef _WIN32
 #include "sys/platform/win32.h"
 #elif __APPLE__
