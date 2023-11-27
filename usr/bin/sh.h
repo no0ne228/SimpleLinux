@@ -21,5 +21,17 @@ void sh_run(const char command[]) {
     #elif __linux__
     printf("\033c");
     #endif
+  } else {
+    #ifdef __linux__
+    printf("\033[91m");
+    #elif __APPLE__
+    printf("\033[91m");
+    #endif
+    printf("%s: command not found\n", command);
+    #ifdef __linux__
+    printf("\033[0m");
+    #elif __APPLE__
+    printf("\033[0m");
+    #endif
   }
 }
