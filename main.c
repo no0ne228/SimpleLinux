@@ -13,7 +13,6 @@
 #include "sys/term_loop.h"
 
 int main() {
-  printf("%s", version_full);
   platform_init();
   term_loop();
   return 0;

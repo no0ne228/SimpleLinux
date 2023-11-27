@@ -2,9 +2,7 @@
  * This file is used to initialize system for Windows terminal
  */
 
-#include <stdio.h>
 #include "../version.h"
+#include <stdio.h>
 
-void platform_init() {
-  printf("%s (Windows)", version_full);
-}
+void platform_init() { version_print(); }

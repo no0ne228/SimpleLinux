@@ -7,5 +7,5 @@
 
 void platform_init() {
   /*Initialize linux terminal*/
-  /*Nothing*/
+  version_print();
 }
