@@ -5,7 +5,7 @@
 #include "../usr/term/data.h"
 #include "lib/input.h"
 #include <stdio.h>
-#include "../usr/bin/sh.h"
+#include "../usr/sh.h"
 
 void term_loop() {
   for (;;) {

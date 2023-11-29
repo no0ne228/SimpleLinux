@@ -3,11 +3,40 @@
  */
 
 #include <stdio.h>
-#include <string.h>
+#include "../sys/lib/fexists.h"
 #include <stdlib.h>
+#include <string.h>
 
-void sh_run(const char command[]) {
-  if (strcmp(command, "welcome") == 0) {
+void sh_run(char command[]) {
+  int bin_exists;
+  #ifdef _WIN32
+  char bin_dir[30] = "usr\\bin\\";
+  #else
+  char bin_dir[30] = "./usr/bin/";
+  #endif
+  strcat(bin_dir, command);
+  #ifdef _WIN32
+  strcat(bin_dir, ".exe");
+  #elif __APPLE__
+  strcat(bin_dir, ".app");
+  #endif
+  bin_exists = fexists(bin_dir);
+  if (bin_exists == 0) {
+    system(bin_dir);
+  } else {
+    #ifdef _WIN32
+    printf("");
+    #elif __APPLE__
+    printf("\033[91m");
+    #elif __linux__
+    printf("\033[91m");
+    #endif
+    printf("%s: command not found\n", command);
+  }
+}
+/* This is old shell
+
+if (strcmp(command, "welcome") == 0) {
     printf("Welcome to SimpleLinux!\n\n");
     printf("This system is created to make Linux simpler and smaller, so it is actually worst than Linux.\nIt runs right in your terminal so you don't need to replace your original OS with this.\n");
     printf("Type 'help' to see avaliable commands\n");
@@ -35,4 +64,4 @@ void sh_run(const char command[]) {
     printf("\033[0m");
     #endif
   }
-}
+*/
