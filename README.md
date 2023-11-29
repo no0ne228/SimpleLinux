@@ -3,7 +3,7 @@ Linux but faster, and lightweight, but less functional. Runs right in your termi
 
 ## Compile and run
 ```bash
-# Compile
+# Compile (write .exe file extension for windows)
 gcc -o SimpleLinux main.c
 # Run
 ./SimpleLinux
