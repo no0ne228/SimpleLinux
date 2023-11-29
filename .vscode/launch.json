@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/User/OneDrive/Рабочий стол/Coding/SimpleLinux-1",
-      "program": "c:/Users/User/OneDrive/Рабочий стол/Coding/SimpleLinux-1/build/Debug/outDebug",
+      "cwd": "c:/Users/User/OneDrive/Рабочий стол/Coding/SimpleLinux",
+      "program": "c:/Users/User/OneDrive/Рабочий стол/Coding/SimpleLinux/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
