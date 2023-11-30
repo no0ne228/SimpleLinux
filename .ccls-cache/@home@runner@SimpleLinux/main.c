@@ -17,6 +17,14 @@
 
 int main() {
   checkcmds();
+  #ifdef _WIN32
+  system("cls");
+  #elif __APPLE__
+  printf("\033c");
+  #elif __linux__
+  printf("\033c");
+  #endif
+
   platform_init();
   term_loop();
   return 0;
