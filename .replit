@@ -1,6 +1,6 @@
 compile = "gcc -o SimpleLinux main.c"
 run = "./SimpleLinux"
-hidden = ["SimpleLinux", "main-debug", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
+hidden = ["main-debug", "**/*.o", "**/*.d", "Makefile"]
 
 [nix]
 channel = "stable-22_11"

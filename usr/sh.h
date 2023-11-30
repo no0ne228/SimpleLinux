@@ -7,8 +7,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void sh_run(char command[]) {
+void sh_run(char command[], char args[]) {
   int bin_exists;
+  int status;
   #ifdef _WIN32
   char bin_dir[30] = "usr\\bin\\";
   #else
@@ -23,8 +24,12 @@ void sh_run(char command[]) {
   strcat(bin_dir, ".out");
   #endif
   bin_exists = fexists(bin_dir);
+  if (!(strcmp(args, "=$NULL"))) {
+    strcat(bin_dir, " ");
+    strcat(bin_dir, args);
+  }
   if (bin_exists == 0) {
-    system(bin_dir);
+    status = system(bin_dir);
   } else {
     #ifdef _WIN32
     printf("");

@@ -12,6 +12,4 @@ int fexists(char fdir[]) {
     } else {
         return 1;
     }
-    
-    
 }

@@ -13,8 +13,10 @@
 #endif
 
 #include "sys/term_loop.h"
+#include "sys/util/checkcmds.h"
 
 int main() {
+  checkcmds();
   platform_init();
   term_loop();
   return 0;
