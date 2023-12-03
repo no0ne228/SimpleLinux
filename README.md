@@ -14,7 +14,7 @@ Use it like normal linux. But don't write commands longer than 100 characters, o
 
 ## OS Tests
 - v.0.02.1 Alpha:
-   - Linux: ❔
+   - Linux: ✅
    - Windows: ✅
    - MacOS: ❔
  - v.0.02 Alpha:
