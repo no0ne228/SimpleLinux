@@ -6,10 +6,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+const char Commands[3][10] = {"welcome", "help", "reboot"};
+
 void checkcmds() {
   printf("Checking commands...\n");
-
-  const char Commands[3][10] = {"welcome", "help", "reboot"};
 
   for (int i = 0; i <= 3 - 1; i += 1) {
     printf("Compiling %s.c\n", Commands[i]);
@@ -27,4 +27,5 @@ void checkcmds() {
     strcat(cc, ".c");
     int status = system(cc);
     printf("Completed with status %d\n", status);
+  }
 }
