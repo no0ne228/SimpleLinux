@@ -12,7 +12,7 @@ void checkcmds() {
   printf("Checking commands...\n");
 
   for (int i = 0; i <= 3 - 1; i += 1) {
-    printf("Compiling %s.c\n", Commands[i]);
+    printf("Compiling %s.c...", Commands[i]);
     char cc[100] = "gcc -o ./usr/bin/";
     strcat(cc, Commands[i]);
     #ifdef _WIN32
@@ -26,6 +26,12 @@ void checkcmds() {
     strcat(cc, Commands[i]);
     strcat(cc, ".c");
     int status = system(cc);
-    printf("Completed with status %d\n", status);
+    if (status == 0) {
+      printf("done\n");
+    } else if (status == 1) {
+      printf("failed\n");
+    } else {
+      printf("failed (%d)\n", status);
+    }
   }
 }

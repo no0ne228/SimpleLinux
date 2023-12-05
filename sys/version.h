@@ -2,6 +2,6 @@
 
 #include <stdio.h>
 
-const char version_full[31] = "SimpleLinux v.0.02.1 Alpha";
+const char version_full[31] = "SimpleLinux v.0.02.3 Alpha";
 
 void version_print() { printf("%s\n\n", version_full); }

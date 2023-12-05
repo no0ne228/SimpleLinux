@@ -3,7 +3,6 @@
  */
 
 #include "../version.h"
-#include <stdio.h>
 
 void platform_init() {
   /*Initialize linux terminal*/

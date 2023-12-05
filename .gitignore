@@ -5,5 +5,5 @@ replit.nix
 .vscode/
 SimpleLinux
 SimpleLinux.exe
-run.sh
+rsl
 usr/bin/*
