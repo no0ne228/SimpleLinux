@@ -7,3 +7,4 @@ SimpleLinux
 SimpleLinux.exe
 rsl
 usr/bin/*
+Makefile
